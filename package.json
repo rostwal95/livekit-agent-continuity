@@ -1,0 +1,17 @@
+{
+  "name": "livekit-agent-ecosystem",
+  "version": "0.1.0",
+  "private": true,
+  "packageManager": "pnpm@12.18.0",
+  "engines": {
+    "node": "^24.22.2 || >=26.13.0 <27"
+  },
+  "scripts": {
+    "check": "pnpm --fail-if-no-match --filter @livekit-ecosystem/channel-continuity typecheck && pnpm --fail-if-no-match --filter @livekit-ecosystem/delegation-specialist typecheck && pnpm --fail-if-no-match --filter @livekit-ecosystem/channel-policy-gateway typecheck && pnpm --fail-if-no-match --filter @livekit-ecosystem/local-console typecheck",
+    "test": "pnpm --fail-if-no-match --filter @livekit-ecosystem/channel-continuity test && pnpm --fail-if-no-match --filter @livekit-ecosystem/delegation-specialist test && pnpm --fail-if-no-match --filter @livekit-ecosystem/channel-policy-gateway test && pnpm --fail-if-no-match --filter @livekit-ecosystem/local-console test",
+    "build": "pnpm --fail-if-no-match --filter @livekit-ecosystem/channel-continuity build && pnpm --fail-if-no-match --filter @livekit-ecosystem/delegation-specialist build && pnpm --fail-if-no-match --filter @livekit-ecosystem/channel-policy-gateway build && pnpm --fail-if-no-match --filter @livekit-ecosystem/local-console build"
+  },
+  "devDependencies": {
+    "prettier": "3.9.10"
+  }
+}
